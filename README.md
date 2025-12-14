@@ -114,8 +114,6 @@ Create a token -\> Create a client -\> Create a session (simple wrapper) -\> Sen
     }
 ```
 
-*Adapted from [libft-api/README.md](https://www.google.com/search?q=user-upload:/hdoo42/ft-api/ft-api-a885ecc5766beeb09094aab9bb6c3b23959424b7/libft-api/README.md) and example usage in binary files like [libft-api/bin/locations.rs](https://www.google.com/search?q=user-upload:/hdoo42/ft-api/ft-api-a885ecc5766beeb09094aab9bb6c3b23959424b7/libft-api/bin/locations.rs).*
-
 ## API Endpoints Implemented
 
 The library aims to cover the 42 API. Here's a summary of what's currently implemented:
@@ -145,8 +143,6 @@ The library aims to cover the 42 API. Here's a summary of what's currently imple
       * `users/:user_id/locations_stats`
       * `users/:user_id/projects_users`
       * `users/:user_id/teams`
-
-*Note: The original README mentioned some v3 endpoints, but the provided code structure primarily points to v2 endpoint implementations. This section has been updated to reflect the available code.*
 
 ## Plans
 
