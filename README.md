@@ -1,7 +1,7 @@
 
 # ft-api
 
-A Rust library for interacting with the 42 API. This repository provides the `libft-api` crate for core API client functionality, the `libft-api-derive` crate (though its current functionality is basic addition), and various example applications in the `libft-api/bin` directory.
+A Rust library for interacting with the 42 API. This repository provides the `libft-api` crate for core API client functionality
 
 ## Project Structure
 
