@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    "libft-api", "libft-api-derive", "libft-api-v3"
+    "libft-api", "libft-api-derive", "libft-api-v3", "libft-api-v3-pace"
 ]
 resolver = "2"
 
