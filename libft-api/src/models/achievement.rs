@@ -34,13 +34,13 @@ pub struct FtAchievementUsersUrl(pub FtUrl);
 
 #[derive(Debug, PartialEq, PartialOrd, Serialize, Deserialize)]
 pub struct FtAchievement {
-    pub id: FtAchievementId,
-    pub name: FtAchievementName,
-    pub description: FtAchievementDescription,
-    pub tier: FtAchievementTier,
-    pub kind: FtAchievementKind,
-    pub visible: bool,
-    pub image: FtAchievementImage,
+    pub id: Option<FtAchievementId>,
+    pub name: Option<FtAchievementName>,
+    pub description: Option<FtAchievementDescription>,
+    pub tier: Option<FtAchievementTier>,
+    pub kind: Option<FtAchievementKind>,
+    pub visible: Option<bool>,
+    pub image: Option<FtAchievementImage>,
     pub nbr_of_success: Option<FtAchievementNbrOfSuccess>,
-    pub users_url: FtAchievementUsersUrl,
+    pub users_url: Option<FtAchievementUsersUrl>,
 }
