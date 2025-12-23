@@ -19,10 +19,6 @@ async fn main() {
                         .with_filter(vec![FtFilterOption::new(
                             FtFilterField::PrimaryCampusId,
                             vec![GYEONGSAN.to_string()],
-                        )])
-                        .with_range(vec![FtRangeOption::new(
-                            FtRangeField::CreatedAt,
-                            vec!["2025-09-01".to_owned(), "2025-10-20".to_owned()],
                         )]),
                 )
                 .await
@@ -51,7 +47,7 @@ async fn main() {
         }
     }
 
-    let mut file = std::fs::File::create("pisciner.json").unwrap();
+    let mut file = std::fs::File::create("whole.json").unwrap();
     file.write_all(serde_json::to_string_pretty(&result).unwrap().as_bytes())
         .unwrap();
 }

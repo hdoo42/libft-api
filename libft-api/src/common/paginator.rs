@@ -5,6 +5,15 @@ use crate::prelude::*;
 use futures::future::BoxFuture;
 use tokio::time::sleep;
 
+pub fn req_validator<F, RS>(f: F) -> F
+where
+    F: for<'a> Fn(
+        Arc<FtClientSession<'a, FtClientReqwestConnector>>,
+        usize,
+    ) -> BoxFuture<'a, ClientResult<RS>>,
+{
+    f
+}
 pub type ReqFn<RS> = for<'a> fn(
     Arc<FtClientSession<'a, FtClientReqwestConnector>>,
     usize,
@@ -31,7 +40,7 @@ where
     let request = Arc::new(request_builder);
 
     let mut page = initial_page;
-    while *client.meta.total_page.lock().unwrap() as usize <= page {
+    while *client.meta.total_page.lock().unwrap() as usize >= page {
         let page = &mut page;
         let request = Arc::clone(&request);
         if let ControlFlow::Break(()) = {

@@ -9,7 +9,7 @@ pub struct FtApiUsersIdRequest {
     pub sort: Option<Vec<FtSortOption>>,
     pub range: Option<Vec<FtRangeOption>>,
     pub filter: Option<Vec<FtFilterOption>>,
-    pub page: Option<u16>,
+    pub page: Option<usize>,
     pub per_page: Option<u8>,
 }
 

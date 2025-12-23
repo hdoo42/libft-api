@@ -16,6 +16,11 @@ path="src/lib.rs"
 name = "piscine_users"
 path = "bin/piscine_users.rs"
 
+[[bin]]
+name = "users_ext"
+path = "bin/users_ext.rs"
+
+
 [[example]]
 name = "scroll"
 

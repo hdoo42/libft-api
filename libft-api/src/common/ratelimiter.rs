@@ -13,7 +13,7 @@ impl HeaderMetaData {
     pub fn new(ratelimiter: RateLimiter) -> Self {
         Self {
             ratelimiter,
-            total_page: Arc::new(Mutex::new(0)),
+            total_page: Arc::new(Mutex::new(u64::MAX)),
         }
     }
 
