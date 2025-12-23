@@ -365,6 +365,34 @@ where
             .http_delete_uri(full_uri, &self.token, request)
             .await
     }
+
+    pub async fn http_patch<RQ, RS>(
+        &self,
+        method_relative_uri: &str,
+        request: &RQ,
+    ) -> ClientResult<RS>
+    where
+        RQ: serde::ser::Serialize + Send + Sync,
+        RS: for<'de> serde::de::Deserialize<'de> + Send,
+    {
+        self.client
+            .http_api
+            .connector
+            .http_patch(method_relative_uri, &self.token, request)
+            .await
+    }
+
+    pub async fn http_patch_uri<RQ, RS>(&self, full_uri: Url, request: &RQ) -> ClientResult<RS>
+    where
+        RQ: serde::ser::Serialize + Send + Sync,
+        RS: for<'de> serde::de::Deserialize<'de> + Send,
+    {
+        self.client
+            .http_api
+            .connector
+            .http_patch_uri(full_uri, &self.token, request)
+            .await
+    }
 }
 
 lazy_static! {
